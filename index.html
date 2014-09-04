@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="classPage">
+  <head>
+    <title>North Union Math</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+  </head>
+  <body ng-controller="ClassListController as clalist">
+    <div class="header">
+      <h1>Ms. Chizek's Math Classes</h1>
+    </div class="container">
+    <h1>LIST OF CLASSES</h1>
+    <div class="row" ng-repeat = "aclass in clalist.classes" >
+      <div class="eachClassTitle col-xs-4">
+        <h3>{{aclass.title}}</h3>
+        <h5>{{aclass.time}}</h5>
+      </div>
+      <div class="eachClassDetails col-xs-8">
+        <p>{{aclass.description}}</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
