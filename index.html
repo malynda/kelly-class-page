@@ -8,8 +8,41 @@
     <div class="header">
       <h1>Ms. Chizek's Math Classes</h1>
     </div class="container">
-    <h1>LIST OF CLASSES</h1>
-    <div class="row" ng-repeat = "aclass in clalist.classes" >
+        <div>Courses: Click the course you wish to find lesson plans for & accompanied documents. </div>
+      <!-- <div ng-repeat = "aclass in clalist.classes" > -->
+        <section ng-controller="TabController as tab">
+
+          <ul class="nav nav-pills">
+
+            <span ng-repeat = "aclass in clalist.classes" >
+            <li ng-class="{active:tab.isSet($index)}">
+              <a href ng-click="tab.setTab($index)">{{clalist.classes[$index].title}}</a>
+            </li>
+            <!-- <li ng-class="{active:tab.isSet(2)}">
+              <a href ng-click="tab.setTab(2)">Algebra 1</a>
+            </li>
+            <li ng-class="{active:tab.isSet(3)}">
+              <a href ng-click="tab.setTab(3)">Algebra 1 Lab</a>
+            </li>
+            <li ng-class="{active:tab.isSet(4)}">
+              <a href ng-click="tab.setTab(4)">Algebra 2</a>
+            </li> -->
+          </span>
+          </ul>
+          <div ng-repeat = "aclass in clalist.classes" >
+         <div class="tab" ng-show="tab.isSet({{$index}})">
+           {{aclass.title}}
+           {{aclass.time}}
+        </div>
+      </div>
+      </section>
+    <!-- </div> -->
+        <!-- <li ng-class="{active:tab.isSet(2)}">
+          <a href ng-click="tab.setTab(2)">Students</a>
+        </li> -->
+
+
+    <!-- <div class="row" ng-repeat = "aclass in clalist.classes" >
       <div class="eachClassTitle col-xs-4">
         <h3>{{aclass.title}}</h3>
         <h5>{{aclass.time}}</h5>
@@ -18,6 +51,7 @@
         <p>{{aclass.description}}</p>
       </div>
     </div>
+    </div> -->
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
