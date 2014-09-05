@@ -1,8 +1,6 @@
 (function(){
   var app = angular.module('classPage', []);
 
-
-
   app.controller('ClassListController',['$http', function($http){
     var teacher = this;
     teacher.classes = [];
@@ -13,6 +11,7 @@
 
   app.controller('TabController', function(){
   	this.tab = 0;
+    this.tab2 = 0;
     this.setTab = function(tab){
     	this.tab = tab;
     };
@@ -20,7 +19,6 @@
     	return this.tab == tab;
     };
   });
-
 
 
 })();

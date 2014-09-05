@@ -1,60 +1,57 @@
-<!DOCTYPE html>
-<html ng-app="classPage">
+  <!DOCTYPE html>
+  <html ng-app="classPage">
   <head>
     <title>North Union Math</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
   <body ng-controller="ClassListController as teacher">
-    <div class="header">
+    <div class="jumbotron">
       <h1>Ms. Chizek's Math Classes</h1>
-    </div class="container">
-        <div>Courses: Click the course you wish to find lesson plans for & accompanied documents. </div>
-      <!-- <div ng-repeat = "aclass in clalist.classes" > -->
-        <section ng-controller="TabController as tab">
+      <div class="note">Courses: Click the course you wish to find lesson plans for & accompanied documents. </div>
+    </div>
+    <div class="container">
 
-          <ul class="nav nav-pills">
+      <section class="tab" ng-controller="TabController as tab">
 
-            <span  >
-            <li  ng-repeat = "aclass in teacher.classes" ng-class="{active:tab.isSet($index+1)}">
-              <a href ng-click="tab.setTab($index+1)">{{teacher.classes[$index+1].title}}</a>
-            </li>
-            <!-- <li ng-class="{active:tab.isSet(2)}">
-              <a href ng-click="tab.setTab(2)">Algebra 1</a>
-            </li>
-            <li ng-class="{active:tab.isSet(3)}">
-              <a href ng-click="tab.setTab(3)">Algebra 1 Lab</a>
-            </li>
-            <li ng-class="{active:tab.isSet(4)}">
-              <a href ng-click="tab.setTab(4)">Algebra 2</a>
-            </li> -->
-          </span>
-          </ul>
-          <div ng-repeat = "aclass in teacher.classes" >
-         <div class="tab" ng-show="tab.isSet({{$index+1}})">
-           {{aclass.title}}
-           <div class="times" ng-repeat="time in aclass.times">
-           <p>{{time}}</p>
-         </div>
+        <ul class="row nav nav-pills">
+          <li ng-repeat = "aclass in teacher.classes" ng-class="{active:tab.isSet($index+1)}">
+            <a href ng-click="tab.setTab($index+1)">{{teacher.classes[$index].title}}</a>
+          </li>
+          <li>
+            <a href ng-click="tab.setTab(0)">CLEAR</a>
+          </li>
+        </ul>
+        <div ng-repeat = "aclass in teacher.classes" >
+          <div class="tab" ng-show="tab.isSet({{$index+1}})">
+            {{aclass.title}}
+            <div class="row times" >
+              <div ng-repeat="time in aclass.times">
+                <p class="col-xs-2">{{time}}</p>
+              </div>
+            </div>
+            <div ng-controller="TabController as tab2">
+              <ul class="row nav nav-pills lessonPlans">
+                <li ng-repeat="week in aclass.lessonPlans" ng-class="{active:tab2.isSet($index+1)}">
+                  <a href ng-click="tab2.setTab($index+1)">{{week.week}}</a>
+                </li>
+              </ul>
+              <div class="row" ng-repeat="week in aclass.lessonPlans">
+                <div class="tab2 col-xs-10" ng-show="tab2.isSet({{$index+1}})">
+                  <p>Monday: {{week.Monday}}</p>
+                  <p>Tuesday: {{week.Tuesday}}</p>
+                  <p>Wednesday: {{week.Wednesday}}</p>
+                  <p>Thursday: {{week.Thursday}}</p>
+                  <p>Friday: {{week.Friday}}</p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
-      </section>
-    <!-- </div> -->
-        <!-- <li ng-class="{active:tab.isSet(2)}">
-          <a href ng-click="tab.setTab(2)">Students</a>
-        </li> -->
-
-
-    <!-- <div class="row" ng-repeat = "aclass in clalist.classes" >
-      <div class="eachClassTitle col-xs-4">
-        <h3>{{aclass.title}}</h3>
-        <h5>{{aclass.time}}</h5>
-      </div>
-      <div class="eachClassDetails col-xs-8">
-        <p>{{aclass.description}}</p>
-      </div>
     </div>
-    </div> -->
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
-</html>
+  </html>

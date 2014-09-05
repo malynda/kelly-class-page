@@ -1,0 +1,9 @@
+.jumbotron{
+  text-align: center;
+  background-color: #999999;
+  color: #003300;
+  height: 200px;
+}
+.jumbotron.note{
+  font-size: 24px;
+}

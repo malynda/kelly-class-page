@@ -1,37 +1,93 @@
 [
   {
     "title": "Alegbra 1",
-    "times": ["1st Hour", "4th Hour"]
-    "lessonPlans" :
-          [
-            {"week":"Week of Aug 18",
-          "Monday": "Inservice",
-          "Tuesday": "Inservice",
-          "Wednesday":"Expectations, Books, Ice Breakers",
-          "Thursday":"Introduction to Algebra, Expectation Review",
-          "Friday":"Chap 1 Section 1, Early Out For Heat"
-          },
-          {
-            "week":"Week of August 25",
-            "Monday": "Finish Ch1 Sec 1 and Ch1 Sec 2",
-            "Tuesday": "Ch1 Sec 3",
-            "Wednesday": "Ch1 Sec 4",
-            "Thursday": "Ch1 Sec 5",
-            "Friday": "Review Ch1 Sections 1-5"
-            }
-            ]
+    "times": [
+      "1st Hour",
+      "4th Hour"
+    ],
+    "lessonPlans": [
+      {
+        "week": "Week of Aug 18",
+        "Monday": "Inservice",
+        "Tuesday": "Inservice",
+        "Wednesday": "Expectations, Books, Ice Breakers",
+        "Thursday": "Introduction to Algebra, Expectation Review",
+        "Friday": "Chap 1 Section 1, Early Out For Heat"
+      },
+      {
+        "week": "Week of August 25",
+        "Monday": "Finish Ch1 Sec 1 and Ch1 Sec 2",
+        "Tuesday": "Ch1 Sec 3",
+        "Wednesday": "Ch1 Sec 4",
+        "Thursday": "Ch1 Sec 5",
+        "Friday": "Review Ch1 Sections 1-5"
+      }
+    ]
   },
   {
     "title": "Algebra 2",
-    "times": ["2nd Hour", "3rd Hour","5th Hour"]
+    "times": [
+      "2nd Hour",
+      "3rd Hour",
+      "5th Hour"
+    ],
+    "lessonPlans": [{
+      "week":"Week of August 18",
+      "Monday":"Inservice",
+      "Tuesday": "Inservice",
+      "Wednesday": "Expectations, Books, Ice Breakers",
+      "Thursday": "Introduction to Algebra II, Expectation Review",
+      "Friday": "Chap 1 Section 1, Early Out For Heat"
+    },{
+        "week": "Week of August 25",
+        "Monday": "Finish Ch1 Sec 1 and Ch1 Sec 2",
+        "Tuesday": "Ch1 Sec 3",
+        "Wednesday": "Ch1 Sec 4",
+        "Thursday": "Ch1 Sec 4",
+        "Friday": "Review Ch1 Sections 1-4"
+      }]
   },
   {
     "title": "Pre-Algebra",
-    "times": ["6th Hour"]
+    "times": [
+      "6th Hour"
+    ],
+    "lessonPlans":[{
+      "week":"Week of August 18",
+      "Monday":"Inservice",
+      "Tuesday": "Inservice",
+      "Wednesday": "Expectations, Books, Ice Breakers",
+      "Thursday": "Introduction to Algebra, Expectation Review",
+      "Friday": "Chap 1 Section 1, Early Out For Heat"
+      },{
+        "week": "Week of August 25",
+        "Monday": "Finish Ch1 Sec 1 and Ch1 Sec 2",
+        "Tuesday": "Ch1 Sec 3",
+        "Wednesday": "Ch1 Sec 4",
+        "Thursday": "Ch1 Sec 5",
+        "Friday": "Review Ch1 Sections 1-5"
+        }]
   },
   {
     "title": "Algebra 1 Lab",
-    "times":  ["8th Hour"]
+    "times": [
+      "8th Hour"
+    ],
+    "lessonPlans":
+    [{
+      "week":"Week of August 18",
+      "Monday":"Inservice",
+      "Tuesday": "Inservice",
+      "Wednesday": "Expectations, Books, Ice Breakers",
+      "Thursday": "Introduction to Algebra, Expectation Review",
+      "Friday": "Chap 1 Section 1, Early Out For Heat"
+      },{
+        "week": "Week of August 25",
+        "Monday": "Finish Ch1 Sec 1 and Ch1 Sec 2",
+        "Tuesday": "Ch1 Sec 2",
+        "Wednesday": "Ch1 Sec 3",
+        "Thursday": "Ch1 Sec 3",
+        "Friday": "Review Ch1 Sections 1-3"
+      }]
   }
-
 ]
