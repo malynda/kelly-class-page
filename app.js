@@ -1,14 +1,18 @@
 (function(){
   var app = angular.module('classPage', []);
 
-  
 
-  app.controller('ClassListController', function(){
-    this.classes = classes;
-  });
+
+  app.controller('ClassListController',['$http', function($http){
+    var teacher = this;
+    teacher.classes = [];
+    $http.get('ClassData.json').success(function(data){
+        teacher.classes = data;
+    });
+  }]);
 
   app.controller('TabController', function(){
-  	this.tab = 1;
+  	this.tab = 0;
     this.setTab = function(tab){
     	this.tab = tab;
     };

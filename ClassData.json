@@ -1,1 +1,37 @@
-var classes = [{title: "Alegbra 1", time: "2nd Hour", description:"This class focuses on basic principles of algebra..."},{title: "Algebra 2", time: "5th Hour", description: "This class focuses on more advanced algebra topics. Algebra 1 is a prerequisite."}]
+[
+  {
+    "title": "Alegbra 1",
+    "times": ["1st Hour", "4th Hour"]
+    "lessonPlans" :
+          [
+            {"week":"Week of Aug 18",
+          "Monday": "Inservice",
+          "Tuesday": "Inservice",
+          "Wednesday":"Expectations, Books, Ice Breakers",
+          "Thursday":"Introduction to Algebra, Expectation Review",
+          "Friday":"Chap 1 Section 1, Early Out For Heat"
+          },
+          {
+            "week":"Week of August 25",
+            "Monday": "Finish Ch1 Sec 1 and Ch1 Sec 2",
+            "Tuesday": "Ch1 Sec 3",
+            "Wednesday": "Ch1 Sec 4",
+            "Thursday": "Ch1 Sec 5",
+            "Friday": "Review Ch1 Sections 1-5"
+            }
+            ]
+  },
+  {
+    "title": "Algebra 2",
+    "times": ["2nd Hour", "3rd Hour","5th Hour"]
+  },
+  {
+    "title": "Pre-Algebra",
+    "times": ["6th Hour"]
+  },
+  {
+    "title": "Algebra 1 Lab",
+    "times":  ["8th Hour"]
+  }
+
+]

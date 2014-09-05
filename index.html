@@ -4,7 +4,7 @@
     <title>North Union Math</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
   </head>
-  <body ng-controller="ClassListController as clalist">
+  <body ng-controller="ClassListController as teacher">
     <div class="header">
       <h1>Ms. Chizek's Math Classes</h1>
     </div class="container">
@@ -14,9 +14,9 @@
 
           <ul class="nav nav-pills">
 
-            <span ng-repeat = "aclass in clalist.classes" >
-            <li ng-class="{active:tab.isSet($index)}">
-              <a href ng-click="tab.setTab($index)">{{clalist.classes[$index].title}}</a>
+            <span  >
+            <li  ng-repeat = "aclass in teacher.classes" ng-class="{active:tab.isSet($index+1)}">
+              <a href ng-click="tab.setTab($index+1)">{{teacher.classes[$index+1].title}}</a>
             </li>
             <!-- <li ng-class="{active:tab.isSet(2)}">
               <a href ng-click="tab.setTab(2)">Algebra 1</a>
@@ -29,10 +29,12 @@
             </li> -->
           </span>
           </ul>
-          <div ng-repeat = "aclass in clalist.classes" >
-         <div class="tab" ng-show="tab.isSet({{$index}})">
+          <div ng-repeat = "aclass in teacher.classes" >
+         <div class="tab" ng-show="tab.isSet({{$index+1}})">
            {{aclass.title}}
-           {{aclass.time}}
+           <div class="times" ng-repeat="time in aclass.times">
+           <p>{{time}}</p>
+         </div>
         </div>
       </div>
       </section>
