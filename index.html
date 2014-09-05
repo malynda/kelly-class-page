@@ -24,10 +24,10 @@
         </ul>
         <div ng-repeat = "aclass in teacher.classes" >
           <div class="tab" ng-show="tab.isSet({{$index+1}})">
-            {{aclass.title}}
-            <div class="row times" >
+            <div class="row times">
+              <p class="col-xs-1">Class Periods: </p>
               <div ng-repeat="time in aclass.times">
-                <p class="col-xs-2">{{time}}</p>
+                <p class="col-xs-1">{{time}}</p>
               </div>
             </div>
             <div ng-controller="TabController as tab2">

@@ -1,9 +1,27 @@
 .jumbotron{
   text-align: center;
-  background-color: #999999;
+  background-color: lightgray;
   color: #003300;
   height: 200px;
 }
 .jumbotron.note{
   font-size: 24px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+  background-color: #003300;
+}
+
+a, a:hover{
+  color: #003300;
+}
+
+.times{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: lightgray;
+}
+
+.lessonPlans{
+  padding-bottom: 50px;
 }
